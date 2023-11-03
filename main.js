@@ -48,6 +48,8 @@ new fullpage('#fullpage', {
 // ---------------------------------------------------------------------------------------------------------home section animations
 
 //for making eyes follow cursor animation
+// USED TUTORIAL FOR ANIMATING EYES TO CURSOR FEATURE:
+// Beyond Fireship 2022. https://www.youtube.com/watch?v=TGe3pS5LqEw
 document.addEventListener('mousemove', (e) => { //tracks movement of user's cursor 
     console.log(e)
 
