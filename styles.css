@@ -20,6 +20,19 @@ h1 {
   font-size: 6.2vw;
 }
 
+/* --------- sound btn --------- */
+.music { /* PROPERTIES for sound icon */
+  position: absolute; /* makes image fixed */
+  bottom: 10%; 
+  right: 10%; 
+  z-index: 999; /* ENSURE icon is in foreground */
+  font-size: 100px;
+}
+
+#sound-btn::part(base):hover {
+  transform: scale(1.05); 
+}
+
 /* ---------------------------------------------------------------------------------------------------------- fullpage hacks ----------- */
 /* nav */
 #fp-nav ul li .fp-tooltip { /* properties for LEFT-SIDE PROGRESS BAR */
@@ -115,7 +128,7 @@ h1 {
 .rememberAni { /* PROPERTIES to position svg animation (in REMEMBER section) */
   height: 500px;
   left: 27%;
-  top: 20%;
+  margin-top: 3.5%;
 }
 
 .section-remember button { /* PROPERTIES for button, indicating users to scroll further */
@@ -125,8 +138,13 @@ h1 {
   margin-bottom: 30px;
   font-weight: 600;
   font-size: 5em;
-  margin-top: 1%;
+  margin-top: 3%;
   background: #F2F2F2;
+}
+
+.section-remember button:hover {
+  cursor: pointer;
+  transform: scale(1.05); 
 }
 
 /* ---------------------------------------------------------------------------------------------------------- summary section --------------- */

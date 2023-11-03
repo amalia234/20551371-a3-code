@@ -218,7 +218,7 @@ new Glider(document.querySelector('.glider2'), { //PROPERTIES of 2nd carousel
     }
   })
 
-  // menu ---------------------
+// menu ---------------------
 document.addEventListener('DOMContentLoaded', function () {
     let menuItems = document.querySelectorAll('#menu a'); //selects all <a> elements that are in the '#menu' id
 
@@ -228,3 +228,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// music icon ---------------------
+const bgMusic = new Audio('audio/bgmusic.wav')
+
+const soundBtn = document.querySelector('#sound-btn')
+soundBtn.addEventListener('click', () => {
+  
+  if(bgMusic.paused){
+    bgMusic.volume = 0.1 // change volume of music
+    bgMusic.loop = true // make music repeat if ends
+    bgMusic.play()
+    soundBtn.name = 'volume-up'
+  }else{
+    bgMusic.pause()
+    soundBtn.name = 'volume-mute'
+  }
+  
+})
