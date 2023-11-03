@@ -59,7 +59,7 @@ h1 {
 .section-home .content { /* CONTENT PROPERTIES to make centered */
   text-align: center;
   width: 38%;
-  margin-top: -20%;
+  margin-top: -16.8%;
   margin-left: 28%;
 }
 
@@ -69,11 +69,27 @@ h1 {
 }
 
 .section-home p {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 300;
+  font-style: normal;
   color: #31493C;
-  font-size: 1.6vw;
+  font-size: 20px;
   margin-top: -10%;
   margin-left: 18%;
   width: 80%;
+}
+
+#anchor {
+  position: absolute;
+  top: 22.8%;
+  left: 17%;
+  width: 66%;
+}
+
+#eyes, #eyes img { /* PROPERTIES to position eyes in the eye hole */
+  position: absolute;
+  width: 20%;
+  z-index: 9999;
 }
 
 .section-home .fp-overflow { /* tp make PAGE ELEMENTS not cut-off */

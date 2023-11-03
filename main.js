@@ -46,15 +46,48 @@ new fullpage('#fullpage', {
 //--------------------------------------------------------------------------------------------------------------------- start of animations //
 
 // ---------------------------------------------------------------------------------------------------------home section animations
+
+//for making eyes follow cursor animation
+document.addEventListener('mousemove', (e) => { //tracks movement of user's cursor 
+    console.log(e)
+
+    const mouseX = e.clientX; //x variable of cursor position
+    const mouseY = e.clientY; //y variable of cursor position
+
+    const anchor = document.getElementById('anchor') //calculate position of anchor element
+    const rekt = anchor.getBoundingClientRect(); //gives us box 'drawn' around the anchor image
+    const anchorX = rekt.left + rekt.width / 2; //to get middle of that box:
+    const anchorY = rekt.top + rekt.height /2;
+    const eyes = document.querySelectorAll('.eye') //to rotate eyes
+
+    const angleDeg = angle(mouseX, mouseY, anchorX, anchorY); //need to call angle function
+
+    console.log(angleDeg)
+    
+    eyes.forEach(eye => {
+        eye.style.transform = `rotate(${90 + angleDeg}deg)`; //setting style transform rotate property
+    })
+})
+
+function angle(cx, cy, ex, ey){ //function that takes in cursor coordinates, and middleofbaseimage coordinates
+    const dy = ey - cy; //SUBTRACT x AND y values from each other
+    const dx = ex - cx;
+    const rad = Math.atan2(dy, dx); //range [-PI, PI] AKA angle between the two in radian. HOWEVER css needs it in degrees
+    const deg = rad * 180 / Math.PI; // easily convert from radian to degrees. range (-180, 180)
+    return deg;
+}
+
+//other animations
 function homeSection(){
     //console.log("homepage section!")
-    // gsap create timeline for animation
+    //gsap create timeline for animation
     const tl = new TimelineMax({delay: 0.5}) //each animation in timeline has 0.5s delay
 
-    // animate elements -> these all happen in sequence
+    //animate elements -> these all happen in sequence
     tl.from('#blur-home-bg', {opacity: 0, duration: 1}) //fades in WITH 1s duration
-        .from('.section-home .content', {y: 30, opacity: 0, duration: 1}, "-=1.2") // '-=1' jump a second (1s) earlier
+        .from('.section-home .content', {y: 30, opacity: 0, duration: 1}, "-=1.2") //'-=1' jump a second (1s) earlier
         .from('#fp-nav', {opacity: 0, duration: 1})
+        .from('.face', {opacity: 0, duration: 1}, "-=1.2")
 }
 
 // ---------------------------------------------------------------------------------------------------------remember section animations
