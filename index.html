@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- custom scripts / fonts ALWAYS first -->
+  <link rel="stylesheet" href="https://use.typekit.net/xar0dim.css"> <!-- imported font: https://fonts.adobe.com/fonts/niveau-grotesk-->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!--imported font: https://fonts.google.com/specimen/Kanit?preview.text=move%20the%20%26%20arrow%20keys%20to%20move-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,300;0,400;1,100;1,300;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.typekit.net/xar0dim.css"> <!--imported font: https://fonts.adobe.com/fonts/mr-eaves-sans-->
+
+  <!-- script ALWAYS at the end, BUT this script is an exception -->
+  <script src="https://kit.fontawesome.com/3bbd0795ac.js" crossorigin="anonymous"></script>  <!-- code to import custom emojis font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css" integrity="sha512-otONSJGv1l0LjJXcgyqi2MeKXtnthkiXAleeQjFJOKYcVD5u+mOuPb7xCnlsb74Ld+N0ONbP7KYRmW2/OWrvaA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- code to import interactive scrolling plugin -->
+
+  <link rel="stylesheet" href="glider.min.css" type="text/css"> <!-- code to import carousel plugin -->
+
+  <!-- code to import BASE shoelace elements -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script>  
+
+  <!-- own script ALWAYS last -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Depression</title>
+</head>
+
+<body>
+  <!-- Nav ; outside fullpage <div> so it doesn't get affected by scrolling -->
+  <label class="hamburger">
+    <input type="checkbox"> <!-- can be checked/unchecked to open/close -->
+  </label>
+  <aside class="sidebar"> <!-- '<aside>' element used to hold <a> links -->
+    <div id="menu">
+      <div>
+        <a href="#">Home</a> <!-- <a> links to each section of the page -->
+      </div>
+      <div>
+        <a href="#remember">Remember</a>
+      </div>
+      <div>
+        <a href="#summary">Summary</a>
+      </div>
+      <div>
+        <a href="#symptoms">Symptoms</a> 
+      </div>
+      <div>
+        <a href="#hidden">Hidden</a> 
+      </div>
+      <div>
+        <a href="#tips">Tips</a> 
+      </div>
+      <div>
+        <a href="#resources">Resources</a> 
+      </div>
+    </div>
+  </aside>
+
+  <div id="fullpage">
+
+    <!-- Home -->
+    <div class="section section-home">
+      <div class="bg"></div>
+      <img src="images/blur-home.png" alt="Blur on the home section" id="blur-home-bg"> <!-- gets bigger from the middle, so need its own id -->
+
+      <div class="content">
+        <h1>DEPRESSION</h1>
+        <p>move the <i class="fa-regular fa-square-caret-up" style="color: #31493c;"></i> & <i class="fa-regular fa-square-caret-down" style="color: #31493c;"></i> arrow keys to move</p> <!-- copy and paste desired custom emoji -->
+      </div>
+    </div>
+
+    <!-- Remember -->
+    <div class="section section-remember">
+      <div class="bg"></div>
+      <img src="images/rememberAni.svg" alt="Animated text" class="rememberAni"> <!-- svg animation -->
+
+      <div class="content">
+        <button class="jumpto-s3"><i class="fa-solid fa-chevron-down" style="color: #A4BBA5"></i></button>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="section section-summary">
+      <div class="bg"></div>
+      
+      <div class="title">
+        <h1>WHAT IS IT?</h1>
+        <h2>Let's get the facts straight</h2>
+      </div>
+
+      <div class="content">
+        <p>Depression (aka. major depressive disorder) is a <span class="green">&nbsp;common and serious&nbsp;</span> mental illness that affects how you feel, think, and act. It is a mood disorder that causes persistent feelings of <span class="yellow">&nbsp;sadness and loss&nbsp;</span> of interest in activities that you once enjoyed. 
+        <br><br> It can interfere with your daily life and relationships, and it can lead to physical symptoms as well. It is important to <span class="green">&nbsp;seek help and support&nbsp;</span> if you are experiencing symptoms of depression. </p>
+        <!-- '&nbsp;' is an invisible character, used to add more space for 'highlighting' effect -->
+        <img src="images/blur-summary.png" alt="Blur on the summary section" id="blur-summary-bg">
+        <img src="images/chara-summary-section.png" alt="Summary character" id="chara-summary">
+        <img src="images/line.svg" alt="Line" id="line1">
+      </div>
+    </div>
+
+    <!-- Symptoms -->
+    <div class="section section-symptoms">
+      <div class="bg"></div>
+
+      <div class="title">
+        <h1>SYMPTOMS</h1>
+        <h2>Depression includes a variety of symtoms</h2>
+      </div>
+
+      <div class="content">
+        <img src="images/symptomsAni.svg" alt="symptoms moving" id="symptomsAni">
+        <img src="images/flowers.png" alt="flowers" id="flowers-symptoms">
+      </div>
+    </div>
+
+    <!-- Hidden -->
+    <div class="section section-symptoms2">
+      <div class="bg"></div>
+      
+      <div class="title">
+        <h1>HIDDEN</h1>
+        <h2>Certain symptoms may be more challenging to recognize than others</h2>
+      </div>
+
+      <div class="content">
+        <img src="images/chara-symptoms2-section.svg" alt="Symptoms 2 character" id="chara-symptoms2">
+
+        <div class="btns">
+          <div class="btn1">
+            <sl-tooltip trigger="hover" class="btn-info" placement="right"> <!-- TOOLTIP shoelace component -->
+              <div slot="content">Persistent sadness</div>
+              <sl-button circle class="btn-icon"><i class="fa-solid fa-circle" style="color: #f5f5f5;"></i></sl-button> <!-- BUTTON shoelace component -->
+            </sl-tooltip>  
+          </div>
+
+          <div class="btn2">
+            <sl-tooltip trigger="hover" class="btn-info" placement="left"> 
+              <div slot="content">Feelings of guilt</div>
+              <sl-button circle class="btn-icon"><i class="fa-solid fa-circle" style="color: #f5f5f5;"></i></sl-button>
+            </sl-tooltip>  
+          </div>
+
+          <div class="btn3">
+            <sl-tooltip trigger="hover" class="btn-info" placement="right">
+              <div slot="content">Difficulty concentrating</div>
+              <sl-button circle class="btn-icon"><i class="fa-solid fa-circle" style="color: #f5f5f5;"></i></sl-button>
+            </sl-tooltip>  
+          </div>
+        </div>
+
+      </div>
+    </div>
+  
+    <!-- Tips -->
+    <div class="section section-tips">
+      <div class="bg"></div>
+      <img class="fadeInBlur" src="images/bg-fadeIn.png" alt="Fade-in Blur">
+
+      <div class="title">
+        <h1>HOW CAN YOU HELP?</h1>
+        <h2>Some suggestions that might be useful</h2>
+        <img src="images/line.svg" alt="Line" id="line2"> <!-- svg format just to make it higher quality -->
+      </div>
+
+      <sl-tab-group style="--indicator-color: var(--indicator-color);" class="content-tips"> <!-- TAB GROUP shoelace component -->
+        <sl-tab class="tab2" slot="nav" panel="yourself">Yourself</sl-tab> <!-- TAB shoelace component -->
+        <sl-tab class="tab1" slot="nav" panel="others">Others</sl-tab> <!-- TWO (2) tabs interactive -->
+      
+        <!-- in TAB 1 -->
+        <sl-tab-panel name="yourself">
+          <div class="glider1-contain multiple">
+    
+            <button class="glider1-prev"> <!-- button to go the PREVIOUS item -->
+              <i class="fa-solid fa-caret-left"></i>
+            </button>
+    
+            <div class="glider1"> <!-- CAROUSEL glider js component -->
+              <figure>
+                <img src="images/tip1.png" alt="Tip 1">
+              </figure>
+              <figure>
+                <img src="images/tip2.png" alt="Tip 2">
+              </figure>
+              <figure>
+                <img src="images/tip3.png" alt="Tip 3">
+              </figure>
+              <figure>
+                <img src="images/tip4.png" alt="Tip 4">
+              </figure>
+              <figure>
+                <img src="images/tip5.png" alt="Tip 5">
+              </figure>
+            </div>
+    
+            <button class="glider1-next">
+              <i class="fa-solid fa-caret-right"></i> <!-- button to go the NEXT item -->
+            </button>
+    
+            <div id="dots1" class="glider1-dots"></div>
+    
+          </div>
+        </sl-tab-panel>
+
+        <!-- in TAB 2 -->
+        <sl-tab-panel name="others">
+          <div class="glider2-contain multiple">
+    
+            <button class="glider2-prev"> <!-- button to go the PREVIOUS item -->
+              <i class="fa-solid fa-caret-left"></i>
+            </button>
+    
+            <div class="glider2">
+              <figure>
+                <img src="images/tip6.png" alt="Tip 6">
+              </figure>
+              <figure>
+                <img src="images/tip7.png" alt="Tip 7">
+              </figure>
+              <figure>
+                <img src="images/tip8.png" alt="Tip 8">
+              </figure>
+              <figure>
+                <img src="images/tip9.png" alt="Tip 9">
+              </figure>
+              <figure>
+                <img src="images/tip10.png" alt="Tip 10">
+              </figure>
+            </div>
+    
+            <button class="glider2-next"> <!-- button to go the NEXT item -->
+              <i class="fa-solid fa-caret-right"></i>
+            </button>
+    
+            <div id="dots2" class="glider2-dots"></div>
+    
+          </div>
+        </sl-tab-panel>
+
+      </sl-tab-group>
+
+    </div>
+
+    <!-- Resources -->
+    <div class="section section-resources">
+      <div class="bg"></div>
+      
+      <div class="title">
+        <h1>RESOURCES</h1>
+        <h2><i class="fa-solid fa-circle-exclamation"></i> Please select any of the underlined words to view more</h2>  <!-- '(!)' emoji to alert/inform users -->
+      </div>
+
+      <div class="content">
+        <img src="images/flresources.svg" alt="flowers" id="flowers-resources">
+        <p class="resources-info">There are <span class="yellow">&nbsp;various resources&nbsp;</span> available for individuals seeking<br> support 
+          and information about depression.<br> These include depression <span class='links'>organizations</span>, 
+          <span class='links'> websites</span>, and <span class='links'>tools</span> that can connect people with the assistance they need. <!-- 'links' <span> customised to look like interactive links, didn't actually build in - (would take users to third-party website) -->
+        </p>
+        <img src="images/line.svg" alt="Line" id="line3">
+      </div>
+
+      <footer> <!-- footer section (for additional info) -->
+        <p><b>CONTACT US</b></p>
+        <div class="socials">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          
+        </div>
+        <p class="creds"><i class="fa-regular fa-copyright"></i> 2023 ID20551371</p> <!-- credits -->
+      </footer>
+    </div>
+
+  </div><!-- end of fullpage -->
+
+  <!-- imported js ALWAYS first -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace.js"></script> <!-- code to import SHOELACE COMPONENTS -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/components/tooltip/tooltip.js"></script> <!-- code to TOOLTIP shoelace -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/components/tab-panel/tab-panel.js"></script> <!-- code to import TAB PANELS shoelace -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/components/icon/icon.js"></script> <!-- code to import ICONS shoelace -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/components/button/button.js"></script> <!-- code to import BUTTONS shoelace -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js" integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- code to import FULLPAGE COMPONENT (interactive scrolling) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> <!-- code to import GSAP COMPONENTS -->
+  <script src="glider.min.js"></script> <!-- code to import GLIDER COMPONENT -->
+  
+
+  <!-- own js ALWAYS last -->
+  <script src="main.js"></script>
+</body>
+
+</html>
