@@ -501,7 +501,7 @@ h1 {
 .glider1-contain, .glider2-contain { /* OVERALL carousel dimensions */
   text-align: center;
   width: 57%;
-  height: 400px;
+  height: 250px;
   margin-top: -30px;
   margin-bottom: 5%;
   margin-left: 20%;
@@ -614,7 +614,7 @@ h1 {
 footer { /* PROPERTIES of footer */
   height: 100px;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .socials {
