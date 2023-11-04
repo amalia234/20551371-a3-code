@@ -97,15 +97,11 @@ function rememberSection(destination){ //happens everytime user goes to destinat
     console.log("remember section!")
     // get elements
     let section = destination.item //we just want the 'item' inside the object, returns WHOLE div > make sure to put first so can search inside div
-    let heading = section.querySelector('h1') //search inside 'section' instead of whole 'document' > saves time
-    let content = section.querySelector('.content')
-    let btCol = section.querySelector('.bt-col')
+    let content = section.querySelector('.content') //search inside 'section' instead of whole 'document' > saves time
 
     // animate
     const tl = new TimelineMax({delay: 0.5})
-    tl.from(heading, {duration: 1, x: 500, opacity: 0})
-        .from(btCol, {y:'-50', duration: 0.5, opacity: 0, stagger: 3}) //'stagger' makes it seem like it recoiled
-        .from(content, {duration: 1, y: 30, opacity: 0}, '-=1')
+    tl.from(content, {duration: 1, y: 30, opacity: 0})
 }
 
 // ---------------------------------------------------------------------------------------------------------summary section animations
@@ -220,14 +216,14 @@ new Glider(document.querySelector('.glider2'), { //PROPERTIES of 2nd carousel
 
 // menu ---------------------
 document.addEventListener('DOMContentLoaded', function () {
-    let menuItems = document.querySelectorAll('#menu a'); //selects all <a> elements that are in the '#menu' id
+    let menuItems = document.querySelectorAll('#menu a') //selects all <a> elements that are in the '#menu' id
 
     menuItems.forEach(function (menuItem, index) { //for each menu item, it performs a function that takes in 'menuItem' and its 'index'
         menuItem.addEventListener('click', function () { 
             fullpage_api.moveTo(index + 1); // FullPage.js starts counting from 1. when menu item is CLICKED, triggers next screen to be displayed
-        });
-    });
-});
+        })
+    })
+})
 
 // music icon ---------------------
 const bgMusic = new Audio('audio/bgmusic.wav')
