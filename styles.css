@@ -55,6 +55,7 @@ h1 {
   left: 0;
   bottom: 0;
   background: #F2F2F2;
+  z-index: -9999;
 }
 
 #blur-home-bg {
@@ -62,6 +63,7 @@ h1 {
   right: 20%;
   width: 60%;
   top: -10px;
+  z-index: -999;
   animation: bounce 5s ease-in-out infinite; /* animation named 'bounce' + duration of 5s + ease-in-out GRAPH + loops -> creates gentle calming movement */
 }
 
@@ -88,17 +90,46 @@ h1 {
   width: 80%;
 }
 
-#anchor {
+.face-container {
+  height: 50%;
+  z-index: -4;
+}
+
+.face {
   position: absolute;
-  top: 22.8%;
-  left: 17%;
-  width: 66%;
+  width: 80%; 
+  height: 40%;
+  max-width: 800px; /* PREVENTS face from becoming too big */
+  bottom: 23.5%; 
+  left: 24.5%; 
 }
 
 #eyes, #eyes img { /* PROPERTIES to position eyes in the eye hole */
   position: absolute;
   width: 20%;
   z-index: 9999;
+}
+
+#eye1 {
+  max-width: 100%; /* ENSURES image scales with the face */
+  height: auto; /* KEEPS image aspect ratio */
+  position: absolute;
+  top: -462px;
+  left: 422px;
+  right: 0;
+  bottom: 0;
+  margin: auto; 
+}
+
+#eye2 {
+  max-width: 100%; /* ENSURES image scales with the face */
+  height: auto; /* KEEPS image aspect ratio */
+  position: absolute;
+  top: -462px;
+  left: 340px;
+  right: 0;
+  bottom: 0;
+  margin: auto; 
 }
 
 .section-home .fp-overflow { /* tp make PAGE ELEMENTS not cut-off */
